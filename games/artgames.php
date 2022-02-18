@@ -1,53 +1,66 @@
 
-<?php
-  include("insert.php");
+   <!DOCTYPE html>
 
-   $dbhost = 'localhost';
-   $dbuser = 'root';
-   $dbpass = "";
-   
-   $conn = mysqli_connect($dbhost, $dbuser, $dbpass) or die('Could not connect: '. mysqli_error());
-   
+<html lang="en">
 
-    $sql = "SELECT * FROM art";
-     mysqli_select_db($conn, 'games');
-    $result = mysqli_query($conn, $sql ) or die("Could not get data: " .mysqli_error($conn));
-
-echo "<table>";
-while($row = mysqli_fetch_array($result, MYSQLI_ASSOC))
-{
-    $image_url = $row['url'];
-    $image_path = $row['img'];
-  echo "<tr>
-         <td>".$row['title']."</td>
-           <td>
-           <a href=".$image_url."><img src=uploads/$image_path width='250' height='250' alt='' /></a>
-      </td>
-        </tr>";     
-}
-?>
-
-<!DOCTYPE html>
-<html>
 <head>
-    <link rel = "stylesheet" href = "css/styles.css">
-<title> Art Games </title>
+    <meta charset="UTF-8">
+
+    <title>Art Games</title>
+
+    <link rel="stylesheet" href="css/styles.css">
 </head>
-
 <body>
-    <a href="https://quickdraw.withgoogle.com/"><div id= "art-tile"><span></span></div></a>
 
-  <form action = "" method="POST">
-    name<input type="text" name="title"><br>
-    img<input type="text" name="img"><br>
-    url<input type="text" name="url"><br>
-    <input type= "submit" name="submit">
-  </form>
-  </body>
-  <body>
+    <form action = "" method="POST">
+        name<input type="text" name="name"><br>
+        img<input type="text" name="img"><br>
+        url<input type="text" name="url"><br>
+        <input type= "submit" name="submit">
+    </form>
+
+        <div class="container">
+
+           <?php
+            include("insert.php");
+
+            $conn = mysqli_connect('localhost','root',"") or die('Could not connect: '. mysqli_error());
+
+            $query  = "SELECT * FROM art";
+            mysqli_select_db($conn, 'games');
+            $run = mysqli_query($conn,$query) or die("Could not get data: " .mysqli_error($conn));
+
+            if(mysqli_num_rows($run) > 0){
+                while($row = mysqli_fetch_array($run)){
+
+                    $image = $row['img'];
+                    $image_url = $row['url'];
+                    $title = $row['name'];
+        
+          ?>
     
-  </body>
+            <div class="image-grid">
 
-</html>
-</html>
+                <div class="image">
+                    <a href="<?php echo $image_url ?>">
+                    <img src="uploads/<?php echo $image ?>">
+                    </a>
+                </div>
 
+                <div class="text">
+                <h5><?php echo $title?></h5>
+                </div>
+
+            </div>
+
+              <?php
+                }
+                }
+              ?>
+        </div>
+
+    <script src="jquery.js"></script>        
+    <script src="lightbox.min.js"></script>
+
+</body>
+</html>
