@@ -1,10 +1,15 @@
-body {
-  font-size: 16px;
-  color: #fff;
-  background-color: #FFFFFF;
-  font-family: 'Oxygen', sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+body,
+input {
+  font-family: "Poppins", sans-serif;
+}
 /** HEADER **/
 #header-nav {
   background-color: #FDF7C3;
@@ -25,7 +30,7 @@ body {
 }
 .navbar-brand h1 { /* Restaurant name */
   font-family: 'Tuffy', serif;
-  color: #ADD8E6;
+  color: ##8ac4ff;
   font-size: 2em;
   /*text-transform: uppercase;*/
   font-weight: bold;
@@ -53,7 +58,7 @@ body {
   margin-top: 10px;
 }
 #nav-list a {
-  color: #951C49;
+  color: #000000;
   text-align: center;
 }
 #nav-list a:hover {
@@ -90,6 +95,7 @@ body {
   margin-top: 30px;
   padding-top: 35px;
   padding-bottom: 30px;
+  color: #fff;
   background-color: #222;
   border-top: 0;
 }
@@ -118,17 +124,13 @@ body {
 
 
 /* HOME PAGE */
-.container .jumbotron {
-  box-shadow: 0 0 50px #FFFFFF;
-  border: 2px solid #FFFFFF;
-}
 
 #math-tile, #art-tile, #alphabet-tile, #game-tile, #tbd-tile {
   height: 250px;
   width: 100%;
   margin-bottom: 15px;
   position: relative;
-  border: 2px solid #FFFFFF;
+  border: 2px solid #3F0C1F;
   overflow: hidden;
 }
 #math-tile:hover, #art-tile:hover, #alphabet-tile:hover, #game-tile:hover, #tbd-tile:hover {
@@ -146,7 +148,7 @@ body {
   background: url('../images/alphabet_tile.png') no-repeat;
   background-position: center;
 }
-#game-tile {
+#logic-tile {
   background: url('../images/game_tile.png') no-repeat;
   background-position: center;
 }
@@ -154,7 +156,7 @@ body {
   background: url('../images/Rectangle 28.png') no-repeat;
   background-position: center;
 }
-#math-tile span, #art-tile span, #alphabet-tile span, #game-tile span, #tbd-tile span{
+#math-tile span, #art-tile span, #alphabet-tile span, #logic-tile span, #tbd-tile span{
   position: absolute;
   bottom: 0;
   right: 0;
@@ -165,85 +167,9 @@ body {
   background-color: #000;
   color: #fff;
   opacity: .8;
+
 }
 /* END HOME PAGE */
-
-/* MENU CATEGORIES PAGE */
-.category-tile { 
-  position: relative;
-  border: 2px solid #3F0C1F;
-  overflow: hidden;
-  width: 200px;
-  height: 200px;
-  margin: 0 auto 15px;
-}
-.category-tile span {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 100%;
-  text-align: center;
-  font-size: 1.2em;
-  text-transform: uppercase;
-  background-color: #000;
-  color: #fff;
-  opacity: .8;
-}
-.category-tile:hover {
-  box-shadow: 0 1px 5px 1px #cccccc;
-}
-
-#menu-categories-title + div {
-  margin-bottom: 50px;
-}
-/* END MENU CATEGORIES PAGE */
-
-/* SINGLE CATEGORY PAGE */
-.menu-item-tile {
-  margin-bottom: 25px;
-}
-.menu-item-tile hr {
-  width: 80%;
-}
-.menu-item-tile .menu-item-price {
-  font-size: 1.1em;
-  text-align: right;
-  margin-top: -15px;
-  margin-right: -15px;
-}
-.menu-item-tile .menu-item-price span {
-  font-size: .6em;
-}
-.menu-item-photo {
-  position: relative;
-  border: 2px solid #3F0C1F; 
-  overflow: hidden;
-  padding: 0;
-  margin-right: -15px;
-  margin-left: auto;
-  margin-bottom: 20px;
-  max-width: 250px;
-}
-.menu-item-photo div {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 80px;
-  background-color: #557c3e;
-  text-align: center;
-}
-.menu-item-description {
-  padding-right: 30px;
-}
-h3.menu-item-title {
-  margin: 0 0 10px;
-}
-.menu-item-details {
-  font-size: .9em;
-  font-style: italic;
-}
-/* END SINGLE CATEGORY PAGE */
-
 
 /********** Large devices only **********/
 @media (min-width: 1200px) {
@@ -385,6 +311,7 @@ h3.menu-item-title {
     width: 100%;
   }
 }
+
 
 
 
