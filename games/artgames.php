@@ -1,14 +1,19 @@
 
    <!DOCTYPE html>
 
-<html lang="en">
-
+<html lang="en">  
+</div>
 <head>
     <meta charset="UTF-8">
 
     <title>Art Games</title>
 
     <link rel="stylesheet" href="css/styles.css">
+        <style>
+      body
+       {  background-image: 
+        linear-gradient(to right, rgba(255, 250,225), rgba(255,194,194)); }
+    </style>
 </head>
 <body>
 
@@ -42,13 +47,13 @@
             <div class="image-grid">
 
                 <div class="image">
-                    <a href="<?php echo $image_url ?>">
-                    <img src="uploads/<?php echo $image ?>">
-                    </a>
+                    <a href="<?php echo $image_url ?>" target="_blank">
+                          <div class="text">
+                <h1><?php echo $title?></h1>
                 </div>
+                    <img src="uploads/<?php echo $image?>">
 
-                <div class="text">
-                <h5><?php echo $title?></h5>
+                    </a>
                 </div>
 
             </div>
