@@ -1,25 +1,198 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+.image-grid {
+  --gap: 16px;
+  --num-cols: 4;
+  --row-height: 300px;
 
-* {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
+  padding: var(--gap);
+
+  display: grid;
+  grid-template-columns: repeat(var(--num-cols), 1fr);
+  grid-auto-rows: var(--row-height);
+  gap: var(--gap);
+}
+
+.image-grid > img_url {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image-grid-col-2 {
+  grid-column: span 2;
+}
+
+.image-grid-row-2 {
+  grid-row: span 2;
+}
+
+/* Anything udner 1024px */
+@media screen and (max-width: 1199px) {
+  .image-grid {
+    --num-cols: 2;
+    --row-height: 200px;
+  }
+}
+
+.gallery-container{
+
+    padding: 10px 12px;
+    border: 6px solid #ddd15f;
+    margin: 10px;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-gap: .2rem;
+    grid-auto-rows: 200px 400px; 
+
+}
+
+.gallery-item{
+
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+}
+
+.image{
+
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+}
+
+.image img{
+
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: 50% 50%;
+    transition: .3s linear;
+    cursor: pointer;
+
+}
+
+.image img:hover{
+
+    transform: scale(1.3);
+
+}
+
+.gamestext{
+
+    opacity: 100;
+    position: relative;
+    color: #000000;
+    font-size: 10px;
+    transition: .3s linear;
+    pointer-events: none;
+
+}
+
+.gallery-item:hover .text{
+
+    opacity: 1;
+    animation: move-down .3s linear;  
+
+}
+
+@keyframes move-down{
+
+    0%{
+      top: 10%;  
+    }
+
+    50%{
+        top: 35%;
+    }
+
+    100%{
+        top: 50%;
+    }
+
+}
+
+.gallery-container div:nth-child(1){
+
+    grid-column: span 2;
+    grid-row: span 2;
+
+}
+
+.gallery-container div:nth-child(2){
+
+    grid-column: span 2;
+
+}
+
+.gallery-container div:nth-child(3){
+
+    grid-column: span 2;
+    grid-row: span 2;
+
+}
+
+.gallery-container div:nth-child(4){
+
+    grid-row: span 2;
+    grid-column: span 2;
+
+}
+
+.gallery-container div:nth-child(5){
+
+    grid-column: span 2;
+
+    grid-row: span 2;
+
+}
+
+.gallery-container div:nth-child(6){
+
+    grid-column: span 2;
+
+}
+
+.gallery-container div:nth-child(7){
+
+    grid-column: span 4;
+
+}
+
+@media(max-width: 500px){
+
+    .gallery-container
+    {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+/* Christine's CSS */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body,
 input {
-  font-family: "Poppins", sans-serif;
+  margin: 0;
+font-family: "Poppins", sans-serif;
 }
+
 /** HEADER **/
 #header-nav {
   background-color: #FDF7C3;
   border-radius: 0;
   border: 0;
-
 }
 
 #logo-img {
-  background: url('../images/logo-medium.png') no-repeat;
+  background: url('../uploads/logo-medium.png') no-repeat;
   width: 166px;
   height: 123px;
   margin: 10px 15px 10px 0;
@@ -28,6 +201,7 @@ input {
 .navbar-brand {
   padding-top: 25px;
 }
+
 .navbar-brand h1 { /* Restaurant name */
   font-family: 'Tuffy', serif;
   color: ##8ac4ff;
@@ -44,15 +218,6 @@ input {
 .navbar-brand a:hover, .navbar-brand a:focus {
   text-decoration: none;
 }
-.navbar-brand p { /* Kosher cert */
-  color: #000;
-  /*text-transform: uppercase;*/
-  font-size: .7em;
-  margin-top: 15px;
-}
-.navbar-brand p span { /* Star-K */
-  vertical-align: middle;
-}
 
 #nav-list {
   margin-top: 10px;
@@ -66,19 +231,6 @@ input {
 }
 #nav-list a span {
   font-size: 1.8em;
-}
-
-#phone {
-  margin-top: 5px;
-}
-#phone a { /* Phone number */
-  text-align: right;
-  padding-bottom: 0;
-}
-#phone div { /* We Deliver */
-  color: #557c3e;
-  text-align: right;
-  padding-right: 15px;
 }
 
 .navbar-header button.navbar-toggle, .navbar-header .icon-bar {
@@ -132,28 +284,29 @@ input {
   position: relative;
   border: 2px solid #3F0C1F;
   overflow: hidden;
+
 }
 #math-tile:hover, #art-tile:hover, #alphabet-tile:hover, #game-tile:hover, #tbd-tile:hover {
   box-shadow: 0 1px 5px 1px #cccccc;
 }
 #math-tile {
-  background: url('../images/math_tile.png') no-repeat;
+  background: url('../uploads/math_tile.png') no-repeat;
   background-position: center;
 }
 #art-tile {        
-  background: url('../images/art_tile.png') no-repeat;
+  background: url('../uploads/art_tile.png') no-repeat;
   background-position: center;
 }
 #alphabet-tile {
-  background: url('../images/alphabet_tile.png') no-repeat;
+  background: url('../uploads/alphabet_tile.png') no-repeat;
   background-position: center;
 }
 #logic-tile {
-  background: url('../images/game_tile.png') no-repeat;
+  background: url('../uploads/game_tile.png') no-repeat;
   background-position: center;
 }
 #tbd-tile {
-  background: url('../images/Rectangle 28.png') no-repeat;
+  background: url('../uploads/Rectangle 28.png') no-repeat;
   background-position: center;
 }
 #math-tile span, #art-tile span, #alphabet-tile span, #logic-tile span, #tbd-tile span{
@@ -174,7 +327,7 @@ input {
 /********** Large devices only **********/
 @media (min-width: 1200px) {
   .container .jumbotron {
-    background: url('../images/jumbotron_1200.jpg') no-repeat;
+    background: url('../uploads/jumbotron_1200.jpg') no-repeat;
     height: 675px;
   }
 }
@@ -183,7 +336,7 @@ input {
 @media (min-width: 992px) and (max-width: 1199px) {
   /* Header */
   #logo-img {
-    background: url('../images/logo-small.png') no-repeat;
+    background: url('../uploads/logo-small.png') no-repeat;
     width: 100px;
     height: 100px;
     margin: 5px 5px 5px 0;
@@ -202,7 +355,7 @@ input {
 @media (min-width: 768px) and (max-width: 991px) {
   /* Home Page */
   .container .jumbotron {
-    background: url('../images/jumbotron_768.jpg') no-repeat;
+    background: url('../uploads/jumbotron_768.jpg') no-repeat;
     height: 432px;
   }
   /* End Home Page */
@@ -290,7 +443,7 @@ input {
 /********** Super extra small devices Only :-) (e.g., iPhone 4) **********/
 @media (max-width: 479px) {
   /* Header */
-  .navbar-brand h1 { /* Restaurant name */
+  .navbar-brand h1 { 
     padding-top: 5px;
     font-size: 6vw;
   }
@@ -311,7 +464,3 @@ input {
     width: 100%;
   }
 }
-
-
-
-
