@@ -8,15 +8,13 @@
     <title>Alphabet Games</title>
 
     <link rel="stylesheet" href="css/styles.css">
+    <style>
+      body
+       {  background-image: 
+        linear-gradient(to right, rgba(255, 250,225), rgba(173,211,227)); }
+    </style>
 </head>
 <body>
-
-    <form action = "" method="POST">
-        name<input type="text" name="name"><br>
-        img<input type="text" name="img"><br>
-        url<input type="text" name="url"><br>
-        <input type= "submit" name="submit">
-    </form>
 
         <div class="container">
 
@@ -38,15 +36,15 @@
         
           ?>
     
-            <div class="image-grid">
-
-                <div class="text">
-                <h5><?php echo $title?></h5>
-                </div>
+          <div class="image-grid">
 
                 <div class="image">
-                    <a href="<?php echo $image_url ?>">
-                    <img src="uploads/<?php echo $image ?>">
+                    <a href="<?php echo $image_url ?>" target="_blank">
+                          <div class="text">
+                <h1><?php echo $title?></h1>
+                </div>
+                    <img src="uploads/<?php echo $image?>">
+
                     </a>
                 </div>
 
@@ -57,7 +55,12 @@
                 }
               ?>
         </div>
-
+   <form action = "" method="POST">
+        name<input type="text" name="name"><br>
+        img<input type="text" name="img"><br>
+        url<input type="text" name="url"><br>
+        <input type= "submit" name="submit">
+    </form>
     <script src="jquery.js"></script>        
     <script src="lightbox.min.js"></script>
 
