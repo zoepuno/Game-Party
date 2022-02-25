@@ -137,19 +137,19 @@ input {
   box-shadow: 0 1px 5px 1px #cccccc;
 }
 #math-tile {
-  background: url('../images/math_tile.png') no-repeat;
+  background: url('../images/math_tile.svg') no-repeat;
   background-position: center;
 }
 #art-tile {        
-  background: url('../images/art_tile.png') no-repeat;
+  background: url('../images/art_tile.svg') no-repeat;
   background-position: center;
 }
 #alphabet-tile {
-  background: url('../images/alphabet_tile.png') no-repeat;
+  background: url('../images/alphabet_tile.svg') no-repeat;
   background-position: center;
 }
 #logic-tile {
-  background: url('../images/Rectangle 27.png') no-repeat;
+  background: url('../images/logic_tile.svg') no-repeat;
   background-position: center;
 }
 #tbd-tile {
