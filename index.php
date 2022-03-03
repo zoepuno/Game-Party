@@ -1,153 +1,109 @@
 <?php 
-session_start();
+    include_once 'header.php';
 
-session_start();
-
-	include("connection.php");
-	include("functions.php");
-
-	$user_data = check_login($con);
 ?>
 
 
-</body>
-</html>
+
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>gameparty</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <link href='https://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
-    <a href= "logout.php">Logout</a>
+<head>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+      <!--<link rel="stylesheet" href="css/reset.css">-->
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!--<link rel="stylesheet" href="css/styles.css">-->
+    <!--<<link href='https://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
+    link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>-->
   </head>
 <body>
-  <header>
-    <nav id="header-nav" class="navbar navbar-default">
-      <div class="container">
-        <div class="navbar-header">
-          <a href="index.php" class="pull-left visible-md visible-lg">
-            <div id="logo-img"></div>
-          </a>
 
-          <div class="navbar-brand">
-            <a href="index.php"><h1>gameparty</h1></a>
-            <p>
-              
-              <br>
-					Hello, <?php echo $user_data['user_name'];?>
-            </p>
-          </div>
-
-          <button id="navbarToggle" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-        </div>
         
-        <div id="collapsable-nav" class="collapse navbar-collapse">
-           <ul id="nav-list" class="nav navbar-nav navbar-right">
-            <li class="visible-xs active">
-              <a href="index.php">
-                <span class="glyphicon glyphicon-home"></span> Home</a>
-            </li>
-            <li>
-              <a href="accounts.php">
-                <span class="#"></span><br class="hidden-xs"> ABC Games</a>
-            </li>
-            <li>
-              <a href="accounts.php">
-                <span class="#"></span><br class="hidden-xs"> Math Games</a>
-            </li>
-            <li>
-              <a href="accounts.php">
-                <span class="#"></span><br class="hidden-xs"> Cool Games!</a>
-            </li>
-            <li>
-              <a href="accounts.php">
-                <span class="#"></span><br class="hidden-xs"> Art Games</a>
-            </li>
-            <li>
-              <a href="accounts.php">
-                <span class="#"></span><br class="hidden-xs"> Accounts</a>
-            </li>
-           
-          
-          </ul><!-- #nav-list -->
-        </div><!-- .collapse .navbar-collapse -->
-      </div><!-- .container -->
-    </nav><!-- #header-nav -->
-  </header>
-
-  <div id="call-btn" class="visible-xs">
-    <a class="btn" href="tel:123-456-7890">
-    <span class="glyphicon glyphicon-earphone"></span>
-    123-456-7890
-    </a>
-  </div>
-  <div id="xs-deliver" class="text-center visible-xs"></div>
-
-  <div id="main-content" class="container">
-    <!--<div class="jumbotron">
-      <img src="images/jumbotron_768.jpg" alt="Picture of restaurant" class="img-responsive visible-xs">
-    </div>-->
-
+    <?php
+          /*if (isset($_SESSION["useruid"])){
+                
+            echo "<p>Welcome " . $_SESSION["useruid"] . " </p>";
+               
+          }*/
+            
+    ?>
+    
+  </section>
+</div>
+</div>
+<header id="header">
+    
+</header>
+<section>
+  <h2 id="text"><span>It's time to play</span><br>gameparty</h2>
+  <img src="img/bird1.png" id="bird1">
+  <img src="img/bird2.png" id="bird2">
+  <img src="img/forest.png" id="forest">
+  <a href="#" id="btn">Explore</a>
+  <img src="img/rocks.png" id="rocks">
+  <img src="img/water.png" id="water">
+</section>
+  <div class="sec">
+    <h2>Games</h2>
     <div id="home-tiles" class="row">
       <div class="col-md-4 col-sm-6 col-xs-12">
-        <a href="menu-categories.html"><div id="math-tile"><span>Math Games</span></div></a>
+        <a href="alphabetgames.php"><div id="alphabet-tile"><span>Alphabet Games</span></div></a>
       </div>
       <div class="col-md-4 col-sm-6 col-xs-12">
-        <a href="single-category.html"><div id="art-tile"><span>Art Games</span></div></a>
+        <a href="mathgames.php"><div id="math-tile"><span>Math Games</span></div></a>
       </div>
       <div class="col-md-4 col-sm-6 col-xs-12">
-        <a href="single-category.html"><div id="alphabet-tile"><span>ABC Games</span></div></a>
+        <a href="artgames.php"><div id="art-tile"><span>Art Games</span></div></a>
       </div>
-            
+      <div class="col-md-4 col-sm-6 col-xs-12">
+        <a href="logicgames.php"><div id="math-tile"><span>Logic Games</span></div></a>
+      </div>
+      <div class="col-md-4 col-sm-6 col-xs-12">
+        <a href="#"><div id="tbd-tile"><span>Coming Soon</span></div></a>
+      </div>
+      <div class="col-md-4 col-sm-6 col-xs-12">
+        <a href="#"><div id="tbd-tile"><span>Coming Soon</span></div></a>
+      </div>
+  </div>
+  <script>
+    let text = document.getElementById('text');
+    let bird1 = document.getElementById('bird1');
+    let bird2 = document.getElementById('bird2');
+    let forest = document.getElementById('forest');
+    let btn = document.getElementById('btn');
+    let rocks = document.getElementById('rocks');
+    let header = document.getElementById('header');
+
+    window.addEventListener('scroll', function(){
+      let value = window.scrollY;
+
+      text.style.top = 50 +value * -0.5 + '%';
+      bird1.style.top = value * -1.5 + 'px';
+      bird1.style.left = value * 2 +  'px';
+      bird2.style.top = value * -1.5 + 'px';
+      bird2.style.left = value * -5 +  'px';
+      btn.style.marginTop = value * 1.5 + 'px';
+      rocks.style.top = value * -0.12 + 'px';
+      forest.style.top = value * 0.25 + 'px';
+      header.style.top = value * 0.5 + 'px';
+    })
+
+  </script>
+  
+</body>
+<!--<a href="#" class="logo">gameparty</a>-->
     
-      <div class="col-md-4 col-sm-6 col-xs-12">
-        <a href="menu-categories.html"><div id="game-tile"><span>Cool Games</span></div></a>
-      </div>
-      <div class="col-md-4 col-sm-6 col-xs-12">
-        <a href="single-category.html"><div id="tbd-tile"><span>tbd</span></div></a>
-      </div>
-      <div class="col-md-4 col-sm-12 col-xs-12">
-        <a href="single-category.html"><div id="tbd-tile"><span>tbd</span></div></a>
-
-      </div>
-
+      <!--<ul>
+        <li><a href='#' class="active">Home</a></li>
+        <li><a href='#'>Alphabet Games</a></li>
+        <li><a href='#'>Art Games</a></li>
+        <li><a href='#'>Math Games</a></li>
+        <li><a href='#'>Logic Games</a></li>
+        <li><a href='#'>Profile Page</a></li>
+      </ul>-->
     </div><!-- End of #home-tiles -->
   </div><!-- End of #main-content -->
 
-  <footer class="panel-footer">
-    <div class="container">
-      <div class="row">
-       
-  </body>
-        <section id="address" class="col-sm-4">
-          <span>Contact:</span><br>
-          gameparty@gmail.com<br>
-          
-          <hr class="visible-xs">
-        </section>
-        <section id="testimonials" class="col-sm-4">
-          <p>"This website has helped my kid so much!                            -Parent"</p>
-          <p>"I have learned so much from this website!                          - Kid"</p>
-        </section>
-      </div>
-            <div class="text-center">&copy; Copyright gameparty 2022</div>
-
-    </div>
-  </footer>
-
-  <!-- jQuery (Bootstrap JS plugins depend on it) -->
-  <script src="js/jquery-2.1.4.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/script.js"></script>
-</body>
+  <?php 
+      //include_once 'footer.php';
+  ?>
 </html>
