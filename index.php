@@ -11,6 +11,10 @@
   <link rel="stylesheet" href="css/bootstrap.min.css">
       <!--<link rel="stylesheet" href="css/reset.css">-->
       <link rel="stylesheet" type="text/css" href="css/style.css">
+      
+       
+
+    
     <!--<link rel="stylesheet" href="css/styles.css">-->
     <!--<<link href='https://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
     link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>-->
@@ -27,43 +31,26 @@
             
     ?>
     
-  </section>
+  
 </div>
 </div>
 <header id="header">
     
 </header>
 <section>
+  <div class = "cursor"></div>
+
   <h2 id="text"><span>It's time to play</span><br>gameparty</h2>
+  
   <img src="img/bird1.png" id="bird1">
   <img src="img/bird2.png" id="bird2">
   <img src="img/forest.png" id="forest">
-  <a href="#" id="btn">Explore</a>
+  
   <img src="img/rocks.png" id="rocks">
   <img src="img/water.png" id="water">
+  <a href="bubble.php" id="btn">Explore</a>
 </section>
-  <div class="sec">
-    <h2>Games</h2>
-    <div id="home-tiles" class="row">
-      <div class="col-md-4 col-sm-6 col-xs-12">
-        <a href="alphabetgames.php"><div id="alphabet-tile"><span>Alphabet Games</span></div></a>
-      </div>
-      <div class="col-md-4 col-sm-6 col-xs-12">
-        <a href="mathgames.php"><div id="math-tile"><span>Math Games</span></div></a>
-      </div>
-      <div class="col-md-4 col-sm-6 col-xs-12">
-        <a href="artgames.php"><div id="art-tile"><span>Art Games</span></div></a>
-      </div>
-      <div class="col-md-4 col-sm-6 col-xs-12">
-        <a href="logicgames.php"><div id="math-tile"><span>Logic Games</span></div></a>
-      </div>
-      <div class="col-md-4 col-sm-6 col-xs-12">
-        <a href="#"><div id="tbd-tile"><span>Coming Soon</span></div></a>
-      </div>
-      <div class="col-md-4 col-sm-6 col-xs-12">
-        <a href="#"><div id="tbd-tile"><span>Coming Soon</span></div></a>
-      </div>
-  </div>
+  
   <script>
     let text = document.getElementById('text');
     let bird1 = document.getElementById('bird1');
@@ -88,8 +75,30 @@
     })
 
   </script>
-  
-</body>
+  <div class="sec">
+    <h2></h2>
+
+    <!--<div id="home-tiles" class="row">
+      <div class="col-md-4 col-sm-6 col-xs-12">
+        <a href="alphabetgames.php"><div id="alphabet-tile"><span>Alphabet Games</span></div></a>
+      </div>
+      <div class="col-md-4 col-sm-6 col-xs-12">
+        <a href="mathgames.php"><div id="math-tile"><span>Math Games</span></div></a>
+      </div>
+      <div class="col-md-4 col-sm-6 col-xs-12">
+        <a href="artgames.php"><div id="art-tile"><span>Art Games</span></div></a>
+      </div>
+      <div class="col-md-4 col-sm-6 col-xs-12">
+        <a href="logicgames.php"><div id="logic-tile"><span>Logic Games</span></div></a>
+      </div>
+      <div class="col-md-4 col-sm-6 col-xs-12">
+        <a href="#"><div id="tbd-tile"><span>Coming Soon</span></div></a>
+      </div>
+      <div class="col-md-4 col-sm-6 col-xs-12">
+        <a href="#"><div id="tbd-tile"><span>Coming Soon</span></div></a>
+      </div>-->
+  </div>
+  </body>
 <!--<a href="#" class="logo">gameparty</a>-->
     
       <!--<ul>
@@ -106,4 +115,9 @@
   <?php 
       //include_once 'footer.php';
   ?>
+  <script src="js/jquery-2.1.4.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/bubble.js"></script>
+  
 </html>
+
