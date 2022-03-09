@@ -6,28 +6,31 @@
 <div id="wrapper">
 <header>
     <link rel="stylesheet" href="css/bubble.css">
-            <h1>Games<span></span></h1>
-            <img src="https://github.com/ravenwilde/codepenAssets/blob/master/img/default.jpg?raw=true" class="img-head">            
+                  
         </header>
 
         <article>
-            <h2><a href="alphabetgames.php"><img src="images/alphabet_tile.svg" ></a></h2>
+            <h2><a href="alphabetgames.php">
+                <img src="images/alphabet_tile.svg" ></a></h2>
             
         </article>
 
         <article>
-            <h2><a href="mathgames.php">Math Games</a></h2>
-            <img src="https://github.com/ravenwilde/codepenAssets/blob/master/img/default.jpg?raw=true" >
+            <h2><a href="mathgames.php">
+            <img src="images/math_tile.svg" ></a></h2>
         </article>
 
         <article>
-            <h2><a href="artgames.php">Art Games</a></h2>
-            <img src="https://github.com/ravenwilde/codepenAssets/blob/master/img/default.jpg?raw=true" >
+            <h2><a href="artgames.php">
+                <img src="images/art_tile.svg"></a></h2>
+            
         </article>
 
         <article>
-            <h2><a href="logic.php">Logic Games</a></h2>
-            <img src="https://github.com/ravenwilde/codepenAssets/blob/master/img/default.jpg?raw=true" >
+            <h2><a href="logicgames.php">
+                <img src="images/logic_tile.svg">
+            </a></h2>
+            
         </article>
 
         
