@@ -53,12 +53,6 @@
   </div>
 
   
- <!-- <p class="game-explanation">
-    <strong class="important">提示:</strong> 按方向键或者触摸屏幕即可开玩
-  </p>
-  <hr>
- 	<p>2014</p>
-    -->
 </div>
  <script src="js/jquery-2.1.4.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
